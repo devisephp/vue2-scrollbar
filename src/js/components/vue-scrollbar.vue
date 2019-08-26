@@ -265,8 +265,8 @@ export default {
       let $scrollArea = this.$refs.scrollArea
       let $scrollWrapper = this.$refs.scrollWrapper
 
-      const $height = $scrollArea.children[0] ? $scrollArea.children[0].clientHeight : 0;
-      const $width = $scrollArea.children[0] ? $scrollArea.children[0].clientWidth : 0;
+      const $height = typeof $scrollArea !== 'undefined' && $scrollArea.children[0] ? $scrollArea.children[0].clientHeight : 0;
+      const $width = typeof $scrollArea !== 'undefined' && $scrollArea.children[0] ? $scrollArea.children[0].clientWidth : 0;
 
       // Get new Elements Size
       let elementSize = {
