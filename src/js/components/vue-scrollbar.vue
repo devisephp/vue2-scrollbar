@@ -275,8 +275,8 @@ export default {
         scrollAreaWidth: $width,
 
         // Scroll Wrapper Height and Width
-        scrollWrapperHeight: $scrollWrapper.clientHeight,
-        scrollWrapperWidth: $scrollWrapper.clientWidth,
+        scrollWrapperHeight: typeof $scrollWrapper !== 'undefined' ? $scrollWrapper.clientHeight : 0,
+        scrollWrapperWidth: typeof $scrollWrapper !== 'undefined' ? $scrollWrapper.clientWidth : 0,
       }
       return elementSize
     },

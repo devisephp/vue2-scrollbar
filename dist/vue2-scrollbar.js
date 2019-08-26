@@ -2,7 +2,7 @@
  * Copyright (c) 2016 Naufal Rabbani (http://github.com/BosNaufal),
  * ,Licensed Under MIT (http://opensource.org/licenses/MIT),
  * ,
- * ,Vue 2 Scrollbar @ Version 0.0.4,
+ * ,Vue 2 Scrollbar @ Version 0.0.5,
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -850,8 +850,8 @@ exports.default = {
         scrollAreaWidth: $width,
 
         // Scroll Wrapper Height and Width
-        scrollWrapperHeight: $scrollWrapper.clientHeight,
-        scrollWrapperWidth: $scrollWrapper.clientWidth
+        scrollWrapperHeight: typeof $scrollWrapper !== 'undefined' ? $scrollWrapper.clientHeight : 0,
+        scrollWrapperWidth: typeof $scrollWrapper !== 'undefined' ? $scrollWrapper.clientWidth : 0
       };
       return elementSize;
     },
